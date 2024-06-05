@@ -139,24 +139,31 @@ class _MyAppState extends State<WebGlLoaderTextureBasis> {
 
     final gl = three3dRender.gl;
 
-    renderer!.render(scene, camera);
+    try {
+      print(scene);
+      print(camera);
+      // renderer!.render(scene, camera);
 
-    int t1 = DateTime.now().millisecondsSinceEpoch;
-
-    if (verbose) {
-      print("render cost: ${t1 - t} ");
-      print(renderer!.info.memory);
-      print(renderer!.info.render);
+    } catch(err) {
+      print(err.toString());
     }
 
-    // 重要 更新纹理之前一定要调用 确保gl程序执行完毕
+    // int t1 = DateTime.now().millisecondsSinceEpoch;
+
+    // if (verbose) {
+    //   print("render cost: ${t1 - t} ");
+    //   print(renderer!.info.memory);
+    //   print(renderer!.info.render);
+    // }
+
+    // // 重要 更新纹理之前一定要调用 确保gl程序执行完毕
     gl.flush();
 
-    if (verbose) print(" render: sourceTexture: $sourceTexture ");
+    // if (verbose) print(" render: sourceTexture: $sourceTexture ");
 
-    if (!kIsWeb) {
-      three3dRender.updateTexture(sourceTexture);
-    }
+    // if (!kIsWeb) {
+    //   three3dRender.updateTexture(sourceTexture);
+    // }
   }
 
   initRenderer() {
