@@ -9,13 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.4
+  http: ^1.2.1
   universal_html: ^2.0.8
   ffi: ^2.0.1
   image: ^4.2.0
   flutter_gl: ^0.0.20
   crypto: ^3.0.1
-  meta:
+  meta: ^1.12.0
 
   # opentype:
   #   git: git@github.com:wasabia/opentype.git
