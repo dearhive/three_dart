@@ -1,5 +1,6 @@
 import 'package:three_dart/three3d/extras/core/shape.dart';
 import 'package:three_dart/three3d/extras/curves/line_curve.dart';
+import 'package:three_dart/three3d/extras/index.dart';
 import 'package:three_dart/three3d/math/index.dart';
 
 /// Extensible curve object.
@@ -47,13 +48,15 @@ class Curve {
   bool isLineCurve = false;
   bool isSplineCurve = false;
   bool isCubicBezierCurve = false;
+  bool isCubicBezierCurve3 = false;
   bool isQuadraticBezierCurve = false;
 
   Vector2 currentPoint = Vector2(null, null);
 
-  late Vector2 v0;
-  late Vector2 v1;
-  late Vector2 v2;
+  late dynamic v0;
+  late dynamic v1;
+  late dynamic v2;
+  late dynamic v3;
 
   String type = "Curve";
 
@@ -78,6 +81,8 @@ class Curve {
       return Curve.fromJSON(json);
     } else if (type == "LineCurve") {
       return LineCurve.fromJSON(json);
+    } else if (type == "CubicBezierCurve3") {
+      return CubicBezierCurve3.fromJSON(json);
     } else {
       throw " type: $type Curve.castJSON is not support yet... ";
     }

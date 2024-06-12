@@ -3,7 +3,6 @@ import 'package:three_dart/three3d/extras/core/interpolations.dart';
 import 'package:three_dart/three3d/math/index.dart';
 
 class CubicBezierCurve extends Curve {
-  late Vector2 v3;
 
   CubicBezierCurve(Vector2? v0, Vector2? v1, Vector2? v2, Vector2? v3) {
     type = 'CubicBezierCurve';

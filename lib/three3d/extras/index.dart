@@ -11,6 +11,7 @@ export 'core/svg_path.dart';
 export 'core/ttf_font.dart';
 
 export 'curves/cubic_bezier_curve.dart';
+export 'curves/cubic_bezier_curve3.dart';
 export 'curves/ellipse_curve.dart';
 export 'curves/line_curve.dart';
 export 'curves/quadratic_bezier_curve.dart';
