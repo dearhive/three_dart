@@ -115,6 +115,11 @@ class Math {
   static double randFloatSpread(num range) {
     return range * (0.5 - Math.random());
   }
+
+  static double degToRad(num degree) {
+    return degree * math.pi / 180.0;
+  }
+
 }
 
 bool isFinite(num v) {
