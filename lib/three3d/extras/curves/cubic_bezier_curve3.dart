@@ -9,7 +9,7 @@ class CubicBezierCurve3 extends Curve {
     this.v0 = v0 ?? Vector3.init();
     this.v1 = v1 ?? Vector3.init();
     this.v2 = v2 ?? Vector3.init();
-    this.v3 = v2 ?? Vector3.init();
+    this.v3 = v3 ?? Vector3.init();
   }
 
   CubicBezierCurve3.fromJSON(Map<String, dynamic> json) {

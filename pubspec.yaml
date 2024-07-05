@@ -13,7 +13,8 @@ dependencies:
   universal_html: ^2.0.8
   ffi: ^2.0.1
   image: ^4.2.0
-  flutter_gl: ^0.0.21
+  flutter_gl:
+    path: ../flutter_gl/flutter_gl
   crypto: ^3.0.1
   meta: ^1.12.0
 
